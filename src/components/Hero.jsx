@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className={`flex flex-row py-20 `}>
+    <section className={`flex flex-row pb-20 `}>
       <div className={`flex-2  flex-col  `}>
         <div className="flex flex-col justify-start w-full">
           <h2 className="font-extrabold text-white text-[70px] leading-[75px]">

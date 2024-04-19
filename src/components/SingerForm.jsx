@@ -45,7 +45,7 @@ const SingerForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`flex   shadow-sm shadow-white  rounded-[20px]  flex-col md:p-10 p-6  w-full `}
+      className={`flex shadow-sm shadow-white rounded-[20px]  flex-col md:p-10 p-6  w-full `}
     >
       <div className="flex flex-col w-full my-2">
         <label
@@ -61,7 +61,7 @@ const SingerForm = () => {
           onChange={handleChange}
           value={singer.name}
           autoComplete="off"
-          className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
+          className=" h-10 rounded-[10px] input text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
         />
       </div>
       <div className="flex flex-col w-full my-2">
