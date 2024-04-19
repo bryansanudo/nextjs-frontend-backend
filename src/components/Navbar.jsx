@@ -49,13 +49,13 @@ const Navbar = () => {
             {links.map(({ id, name }) => (
               <li
                 key={id}
-                className={`text-[18px] text-white font-medium hover:text-[#FECB5F] duration-700 cursor-pointer `}
+                className={`text-[14px] text-white font-medium hover:text-[#FECB5F] duration-700 cursor-pointer `}
               >
                 <Link href="/">{name}</Link>
               </li>
             ))}
           </ul>
-          <button className="text-white font-medium border-[#FECB5F] border-2 p-2 rounded-lg hover:scale-105 duration-500">
+          <button className="text-[18px] text-white font-medium border-[#FECB5F] border-2 p-2 rounded-lg hover:scale-105 duration-500">
             Ver en opensea
           </button>
         </div>
