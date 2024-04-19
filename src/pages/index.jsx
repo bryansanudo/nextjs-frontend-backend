@@ -10,69 +10,49 @@ import { IoMdPersonAdd } from "react-icons/io";
 import axios from "axios";
 function HomePage({ singers }) {
   return (
-    <div className="bg-[#173539]">
-      {/*  <Layout>
-        <div className="flex flex-col items-center">
-          {singers.map((singer) => (
-            <Link href={`/singers/${singer.id}`} key={singer.id}>
-              <div className="flex gap-4 bg-gray-100 w-[1200px] m-4 border  border-gray-200 shadow-sm shadow-black justify-between hover:bg-gray-300 px-2 py-4 rounded-lg ">
-                <p className="">Id : {singer.id}</p>
-                <p>Name : {singer.name}</p>
-                <p>Age : {singer.age}</p>
-                <p>Gender Musical : {singer.gender}</p>
-              </div>
-            </Link>
-          ))}
-
-          <button className="text-white border-[#FECB5F] border-2 p-2 rounded-lg hover:scale-105 duration-500">
-            <Link href="/new">Create Singers</Link>
-          </button>
-        </div>
-      </Layout> */}
-      <Layout>
-        <div className="overflow-x-auto">
-          <table className="table  text-white">
-            {/* head */}
-            <thead>
-              <tr className={`${styles.title}`}>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Musical Genre</th>
+    <Layout>
+      <div className="overflow-x-auto">
+        <table className="table  text-white">
+          {/* head */}
+          <thead>
+            <tr className={`${styles.title}`}>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Musical Genre</th>
+            </tr>
+          </thead>
+          <tbody
+            className={`font-normal text-white text-[16px] leading-[24px]`}
+          >
+            {/* row 1 */}
+            {singers.map((singer) => (
+              <tr className={``} key={singer.id}>
+                <td className={` `}>{singer.id}</td>
+                <td>{singer.name}</td>
+                <td>{singer.age}</td>
+                <td>{singer.gender}</td>
+                <td className="text-white text-3xl hover:text-[#FECB5F]">
+                  <Link href={`/singers/${singer.id}`}>
+                    <BsThreeDots />
+                  </Link>
+                </td>
               </tr>
-            </thead>
-            <tbody
-              className={`font-normal text-white text-[16px] leading-[24px]`}
-            >
-              {/* row 1 */}
-              {singers.map((singer) => (
-                <tr className={``} key={singer.id}>
-                  <td className={` `}>{singer.id}</td>
-                  <td>{singer.name}</td>
-                  <td>{singer.age}</td>
-                  <td>{singer.gender}</td>
-                  <td className="text-white text-3xl hover:text-[#FECB5F]">
-                    <Link href={`/singers/${singer.id}`}>
-                      <BsThreeDots />
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="w-full  flex items-center justify-center mt-10">
-            <Link href="/new">
-              <button className="group text-white font-medium border-[#FECB5F] border-2 p-2 rounded-lg ">
-                <div className="flex items-center justify-center gap-2">
-                  Create Singer
-                  <IoMdPersonAdd className="text-3xl group-hover:text-[#FECB5F] duration-500" />
-                </div>
-              </button>
-            </Link>
-          </div>
+            ))}
+          </tbody>
+        </table>
+        <div className="w-full  flex items-center justify-center mt-10">
+          <Link href="/new">
+            <button className="group text-white font-medium border-[#FECB5F] border-2 p-2 rounded-lg ">
+              <div className="flex items-center justify-center gap-2">
+                Create Singer
+                <IoMdPersonAdd className="text-3xl group-hover:text-[#FECB5F] duration-500" />
+              </div>
+            </button>
+          </Link>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

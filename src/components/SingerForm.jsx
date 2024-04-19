@@ -43,70 +43,68 @@ const SingerForm = () => {
   }, []);
 
   return (
-    <div className=" p-4 m-4 ">
-      <form
-        onSubmit={handleSubmit}
-        className={`flex   shadow-sm shadow-white  rounded-[20px]  flex-col md:p-10 p-6  w-full `}
-      >
-        <div className="flex flex-col w-full my-2">
-          <label
-            htmlFor="name"
-            className={` flex items-center justify-start mb-1  ${styles.title} `}
-          >
-            Name
-          </label>
+    <form
+      onSubmit={handleSubmit}
+      className={`flex   shadow-sm shadow-white  rounded-[20px]  flex-col md:p-10 p-6  w-full `}
+    >
+      <div className="flex flex-col w-full my-2">
+        <label
+          htmlFor="name"
+          className={` flex items-center justify-start mb-1  ${styles.title} `}
+        >
+          Name
+        </label>
 
-          <input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={singer.name}
-            autoComplete="off"
-            className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
-          />
-        </div>
-        <div className="flex flex-col w-full my-2">
-          <label
-            htmlFor="age"
-            className={` flex items-center justify-start mb-1  ${styles.title} `}
-          >
-            Age
-          </label>
+        <input
+          type="text"
+          name="name"
+          onChange={handleChange}
+          value={singer.name}
+          autoComplete="off"
+          className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
+        />
+      </div>
+      <div className="flex flex-col w-full my-2">
+        <label
+          htmlFor="age"
+          className={` flex items-center justify-start mb-1  ${styles.title} `}
+        >
+          Age
+        </label>
 
-          <input
-            type="text"
-            name="age"
-            id="age"
-            onChange={handleChange}
-            value={singer.age}
-            autoComplete="off"
-            className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
-          />
-        </div>
-        <div className="flex flex-col w-full my-2">
-          <label
-            htmlFor="gender"
-            className={` flex items-center justify-start mb-1  ${styles.title} `}
-          >
-            Gender
-          </label>
+        <input
+          type="text"
+          name="age"
+          id="age"
+          onChange={handleChange}
+          value={singer.age}
+          autoComplete="off"
+          className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
+        />
+      </div>
+      <div className="flex flex-col w-full my-2">
+        <label
+          htmlFor="gender"
+          className={` flex items-center justify-start mb-1  ${styles.title} `}
+        >
+          Gender
+        </label>
 
-          <input
-            type="text"
-            name="gender"
-            id="gender"
-            onChange={handleChange}
-            value={singer.gender}
-            autoComplete="off"
-            className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
-          />
-        </div>
+        <input
+          type="text"
+          name="gender"
+          id="gender"
+          onChange={handleChange}
+          value={singer.gender}
+          autoComplete="off"
+          className=" h-10 rounded-[10px] input   text-black font-normal text-[16px] leading-[24px] w-full pl-4 "
+        />
+      </div>
 
-        <button className="text-white mt-5 mx-auto w-[200px] border-[#FECB5F] border-2 p-2 rounded-lg hover:scale-105 duration-500">
-          {router.query.id ? "Update Singer" : "Create Singer"}
-        </button>
-      </form>
-    </div>
+      <button className="text-white mt-5 mx-auto w-[200px] border-[#FECB5F] border-2 p-2 rounded-lg hover:scale-105 duration-500">
+        {router.query.id ? "Update Singer" : "Create Singer"}
+      </button>
+    </form>
   );
 };
 
