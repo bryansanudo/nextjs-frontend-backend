@@ -101,7 +101,7 @@ const SingerForm = () => {
         />
       </div>
 
-      <button className="text-white mt-5 mx-auto w-[200px] border-[#FECB5F] border-2 p-2 rounded-lg hover:scale-105 duration-500">
+      <button className="text-black font-bold mt-5 mx-auto w-[200px] bg-[#FECB5F]  p-3 rounded-lg hover:scale-105 duration-500">
         {router.query.id ? "Update Singer" : "Create Singer"}
       </button>
     </form>

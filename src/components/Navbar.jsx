@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <>
       <div className=" flex items-center justify-center mb-20  w-full z-50 ">
-        <div className="flex bg-[#173539] gap-20 justify-between items-center w-[1200px] ">
+        <div className="flex  gap-20 justify-between items-center w-[1350px] ">
           <div className="bg-white rounded-full p-[2px]">
             <Link href="/">
               <Image
